@@ -1,8 +1,19 @@
 fn add_sub(a int, b int) []int{
 	return [a+b, a-b]
 }
+	struct Fooo {
+		fooval string
+	}
+	struct Baro {
+		barval string
+	}
+	type Foobaro = Fooo|Baro;
 fn main() {
-	mut u:=map[string]int{}
-	u['one']=1
-	println("${u}")
+
+
+
+	x:=Foobaro(Fooo{"foo"})
+	if x is Fooo {
+		println(x)
+	}
 }
